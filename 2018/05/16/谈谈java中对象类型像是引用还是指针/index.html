@@ -87,18 +87,18 @@
 
 
 
-<meta name="description" content="java中对象变量是不是指针？在java中，也存在指针，不过被称为被限制的指针。即其值是其他变量或内存块的地址，但不能使用指针的各种操作。 java的对象类型java中的队形类型只有一种，那就是引用。下面是定义一个引用的代码。String s = new String(“string”);上面的语句总其实做了两件事，在堆中创建了一个String对象，内容为”string”,在栈中创建了一个引用s，">
+<meta name="description" content="java中对象变量是不是指针？在java中，也存在指针，不过被称为被限制的指针。即其值是其他变量或内存块的地址，但不能使用指针的各种操作。 java的对象类型java中的对象类型只有一种，那就是引用。下面是定义一个引用的代码。String s = new String(“string”);上面的语句总其实做了两件事，在堆中创建了一个String对象，内容为”string”,在栈中创建了一个引用s，">
 <meta name="keywords" content="javase">
 <meta property="og:type" content="article">
 <meta property="og:title" content="谈谈java中对象类型引用是引用还是指针">
 <meta property="og:url" content="http://yoursite.com/2018/05/16/谈谈java中对象类型像是引用还是指针/index.html">
 <meta property="og:site_name" content="Hello,Mr Liu|Blog">
-<meta property="og:description" content="java中对象变量是不是指针？在java中，也存在指针，不过被称为被限制的指针。即其值是其他变量或内存块的地址，但不能使用指针的各种操作。 java的对象类型java中的队形类型只有一种，那就是引用。下面是定义一个引用的代码。String s = new String(“string”);上面的语句总其实做了两件事，在堆中创建了一个String对象，内容为”string”,在栈中创建了一个引用s，">
+<meta property="og:description" content="java中对象变量是不是指针？在java中，也存在指针，不过被称为被限制的指针。即其值是其他变量或内存块的地址，但不能使用指针的各种操作。 java的对象类型java中的对象类型只有一种，那就是引用。下面是定义一个引用的代码。String s = new String(“string”);上面的语句总其实做了两件事，在堆中创建了一个String对象，内容为”string”,在栈中创建了一个引用s，">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-15T16:59:53.605Z">
+<meta property="og:updated_time" content="2018-05-15T17:09:39.723Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="谈谈java中对象类型引用是引用还是指针">
-<meta name="twitter:description" content="java中对象变量是不是指针？在java中，也存在指针，不过被称为被限制的指针。即其值是其他变量或内存块的地址，但不能使用指针的各种操作。 java的对象类型java中的队形类型只有一种，那就是引用。下面是定义一个引用的代码。String s = new String(“string”);上面的语句总其实做了两件事，在堆中创建了一个String对象，内容为”string”,在栈中创建了一个引用s，">
+<meta name="twitter:description" content="java中对象变量是不是指针？在java中，也存在指针，不过被称为被限制的指针。即其值是其他变量或内存块的地址，但不能使用指针的各种操作。 java的对象类型java中的对象类型只有一种，那就是引用。下面是定义一个引用的代码。String s = new String(“string”);上面的语句总其实做了两件事，在堆中创建了一个String对象，内容为”string”,在栈中创建了一个引用s，">
 
 
 
@@ -443,7 +443,7 @@
 
       
         <h2 id="java中对象变量是不是指针？"><a href="#java中对象变量是不是指针？" class="headerlink" title="java中对象变量是不是指针？"></a>java中对象变量是不是指针？</h2><p>在java中，也存在指针，不过被称为被限制的指针。即其值是其他变量或内存块的地址，但不能使用指针的各种操作。</p>
-<h3 id="java的对象类型"><a href="#java的对象类型" class="headerlink" title="java的对象类型"></a>java的对象类型</h3><p>java中的队形类型只有一种，那就是引用。下面是定义一个引用的代码。<br>String s = new String(“string”);<br>上面的语句总其实做了两件事，在堆中创建了一个String对象，内容为”string”,在栈中创建了一个引用s，它指向堆中刚创好的String对象。并且引用s值的改变不影响它所指的对象。请看下面语句：</p>
+<h3 id="java的对象类型"><a href="#java的对象类型" class="headerlink" title="java的对象类型"></a>java的对象类型</h3><p>java中的对象类型只有一种，那就是引用。下面是定义一个引用的代码。<br>String s = new String(“string”);<br>上面的语句总其实做了两件事，在堆中创建了一个String对象，内容为”string”,在栈中创建了一个引用s，它指向堆中刚创好的String对象。并且引用s值的改变不影响它所指的对象。请看下面语句：</p>
 <p>s = new String(“abc”);</p>
 <p>在上面这个语句中，只改变s的值，因此不会对内容为”string”对象造成影响（不考虑垃圾回收情况）。只不过是s指向堆中新对象而已，丛指针上来说，就是s的值改变了而已。</p>
 <p>从上面来看，java的引用，只是表示一个内存位置，该位置就是存在一个对象的位置，而不是真实的对象变量。从指针角度来讲c/c++的指针与jav的引用不谋而合。他们都表示一个内训地址，都可以通过这个内存地址来操纵它所对应的对象。</p>
