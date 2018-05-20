@@ -76,7 +76,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, Java" />
+  <meta name="keywords" content="javase," />
 
 
 
@@ -88,13 +88,14 @@
 
 
 <meta name="description" content="javase之多态与向上向下转型javase之多态定义：多态，意味着一个对象有着多重特征，可以在特定的情况下，表现不同的状态，从而对应着不同的属性和方法。 那么多态如何实现呢，多态的实现技术是“动态绑定”，指的是在执行期间判断引用对象的实际类型，根据其实际的类型调用其相应的方法（这一点我们在后面的向上向下转型中会解释的很清楚） 多态的作用：消除类型之间的耦合关系。 多态的应用在生活中无处不在，同一">
+<meta name="keywords" content="javase">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java多态与向上向下转型">
 <meta property="og:url" content="http://yoursite.com/2018/05/19/java多态与向上向下转型/index.html">
 <meta property="og:site_name" content="Hello,Mr Liu|Blog">
 <meta property="og:description" content="javase之多态与向上向下转型javase之多态定义：多态，意味着一个对象有着多重特征，可以在特定的情况下，表现不同的状态，从而对应着不同的属性和方法。 那么多态如何实现呢，多态的实现技术是“动态绑定”，指的是在执行期间判断引用对象的实际类型，根据其实际的类型调用其相应的方法（这一点我们在后面的向上向下转型中会解释的很清楚） 多态的作用：消除类型之间的耦合关系。 多态的应用在生活中无处不在，同一">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-20T03:57:25.873Z">
+<meta property="og:updated_time" content="2018-05-20T16:49:44.473Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java多态与向上向下转型">
 <meta name="twitter:description" content="javase之多态与向上向下转型javase之多态定义：多态，意味着一个对象有着多重特征，可以在特定的情况下，表现不同的状态，从而对应着不同的属性和方法。 那么多态如何实现呢，多态的实现技术是“动态绑定”，指的是在执行期间判断引用对象的实际类型，根据其实际的类型调用其相应的方法（这一点我们在后面的向上向下转型中会解释的很清楚） 多态的作用：消除类型之间的耦合关系。 多态的应用在生活中无处不在，同一">
@@ -345,6 +346,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java学习/" itemprop="url" rel="index">
+                    <span itemprop="name">java学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -382,7 +405,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  319
+                  443
                 </span>
               
 
@@ -398,7 +421,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  2
                 </span>
               
             </div>
@@ -419,14 +442,15 @@
       
 
       
-        <h2 id="javase之多态与向上向下转型"><a href="#javase之多态与向上向下转型" class="headerlink" title="javase之多态与向上向下转型"></a>javase之多态与向上向下转型</h2><h3 id="javase之多态"><a href="#javase之多态" class="headerlink" title="javase之多态"></a>javase之多态</h3><p>定义：多态，意味着一个对象有着多重特征，可以在特定的情况下，表现不同的状态，从而对应着不同的属性和方法。</p>
+        <h2 id="javase之多态与向上向下转型"><a href="#javase之多态与向上向下转型" class="headerlink" title="javase之多态与向上向下转型"></a>javase之多态与向上向下转型</h2><h3 id="javase之多态"><a href="#javase之多态" class="headerlink" title="javase之多态"></a>javase之多态</h3><h4 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h4><p>多态，意味着一个对象有着多重特征，可以在特定的情况下，表现不同的状态，从而对应着不同的属性和方法。</p>
 <p>那么多态如何实现呢，多态的实现技术是“动态绑定”，指的是在执行期间判断引用对象的实际类型，根据其实际的类型调用其相应的方法（这一点我们在后面的向上向下转型中会解释的很清楚）</p>
-<p>多态的作用：消除类型之间的耦合关系。</p>
+<h4 id="多态的作用："><a href="#多态的作用：" class="headerlink" title="多态的作用："></a>多态的作用：</h4><p>消除类型之间的耦合关系。</p>
 <p>多态的应用在生活中无处不在，同一件事发生在不同对象身上会产生不同的结果。就好如快捷键F1，在word中是Word帮助，在Window下就是window帮助和支持。</p>
-<p>多态存在的三个必要条件：<br>一.要有继承<br>二.要有重写<br>三.父类引用指向子类对象</p>
-<p>java中动态的实现方式：<br>接口实现<br>继承父类方法重写<br>同一个类中进行方法重载</p>
+<h4 id="多态存在的三个必要条件："><a href="#多态存在的三个必要条件：" class="headerlink" title="多态存在的三个必要条件："></a>多态存在的三个必要条件：</h4><p>一.要有继承<br>二.要有重写<br>三.父类引用指向子类对象</p>
+<h4 id="java中动态的实现方式："><a href="#java中动态的实现方式：" class="headerlink" title="java中动态的实现方式："></a>java中动态的实现方式：</h4><p>接口实现<br>继承父类方法重写<br>同一个类中进行方法重载</p>
 <p>注：java中动态绑定技术涉及到jvm，我不懂哈，有时间再去研究，这里就不说了。</p>
-<h3 id="向上转型和向下转型"><a href="#向上转型和向下转型" class="headerlink" title="向上转型和向下转型"></a>向上转型和向下转型</h3><h4 id="向上转型"><a href="#向上转型" class="headerlink" title="向上转型"></a>向上转型</h4>
+<h3 id="向上转型和向下转型"><a href="#向上转型和向下转型" class="headerlink" title="向上转型和向下转型"></a>向上转型和向下转型</h3><h4 id="向上转型"><a href="#向上转型" class="headerlink" title="向上转型"></a>向上转型</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"animal eatting..."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Cat</span> <span class="keyword">extends</span> <span class="title">Animal</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">"我吃鱼"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Dog</span> <span class="keyword">extends</span> <span class="title">Animal</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">"我吃骨头"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"我会跑"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        Animal animal = <span class="keyword">new</span> Cat(); <span class="comment">//向上转型</span></span><br><span class="line">        animal.eat();</span><br><span class="line"></span><br><span class="line">        animal = <span class="keyword">new</span> Dog();</span><br><span class="line">        animal.eat();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//结果:</span></span><br><span class="line"><span class="comment">//我吃鱼</span></span><br><span class="line"><span class="comment">//我吃骨头</span></span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -440,6 +464,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/javase/" rel="tag"><i class="fa fa-tag"></i> javase</a>
+          
+        </div>
       
 
       
@@ -604,7 +634,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#javase之多态与向上向下转型"><span class="nav-number">1.</span> <span class="nav-text">javase之多态与向上向下转型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#javase之多态"><span class="nav-number">1.1.</span> <span class="nav-text">javase之多态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#向上转型和向下转型"><span class="nav-number">1.2.</span> <span class="nav-text">向上转型和向下转型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#向上转型"><span class="nav-number">1.2.1.</span> <span class="nav-text">向上转型</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#javase之多态与向上向下转型"><span class="nav-number">1.</span> <span class="nav-text">javase之多态与向上向下转型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#javase之多态"><span class="nav-number">1.1.</span> <span class="nav-text">javase之多态</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#定义："><span class="nav-number">1.1.1.</span> <span class="nav-text">定义：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多态的作用："><span class="nav-number">1.1.2.</span> <span class="nav-text">多态的作用：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多态存在的三个必要条件："><span class="nav-number">1.1.3.</span> <span class="nav-text">多态存在的三个必要条件：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#java中动态的实现方式："><span class="nav-number">1.1.4.</span> <span class="nav-text">java中动态的实现方式：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#向上转型和向下转型"><span class="nav-number">1.2.</span> <span class="nav-text">向上转型和向下转型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#向上转型"><span class="nav-number">1.2.1.</span> <span class="nav-text">向上转型</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

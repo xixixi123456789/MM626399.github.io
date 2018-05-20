@@ -3,7 +3,13 @@
   <entry>
     <title><![CDATA[java多态与向上向下转型]]></title>
     <url>%2F2018%2F05%2F19%2Fjava%E5%A4%9A%E6%80%81%E4%B8%8E%E5%90%91%E4%B8%8A%E5%90%91%E4%B8%8B%E8%BD%AC%E5%9E%8B%2F</url>
-    <content type="text"><![CDATA[javase之多态与向上向下转型javase之多态定义：多态，意味着一个对象有着多重特征，可以在特定的情况下，表现不同的状态，从而对应着不同的属性和方法。 那么多态如何实现呢，多态的实现技术是“动态绑定”，指的是在执行期间判断引用对象的实际类型，根据其实际的类型调用其相应的方法（这一点我们在后面的向上向下转型中会解释的很清楚） 多态的作用：消除类型之间的耦合关系。 多态的应用在生活中无处不在，同一件事发生在不同对象身上会产生不同的结果。就好如快捷键F1，在word中是Word帮助，在Window下就是window帮助和支持。 多态存在的三个必要条件：一.要有继承二.要有重写三.父类引用指向子类对象 java中动态的实现方式：接口实现继承父类方法重写同一个类中进行方法重载 注：java中动态绑定技术涉及到jvm，我不懂哈，有时间再去研究，这里就不说了。 向上转型和向下转型向上转型]]></content>
+    <content type="text"><![CDATA[javase之多态与向上向下转型javase之多态定义：多态，意味着一个对象有着多重特征，可以在特定的情况下，表现不同的状态，从而对应着不同的属性和方法。 那么多态如何实现呢，多态的实现技术是“动态绑定”，指的是在执行期间判断引用对象的实际类型，根据其实际的类型调用其相应的方法（这一点我们在后面的向上向下转型中会解释的很清楚） 多态的作用：消除类型之间的耦合关系。 多态的应用在生活中无处不在，同一件事发生在不同对象身上会产生不同的结果。就好如快捷键F1，在word中是Word帮助，在Window下就是window帮助和支持。 多态存在的三个必要条件：一.要有继承二.要有重写三.父类引用指向子类对象 java中动态的实现方式：接口实现继承父类方法重写同一个类中进行方法重载 注：java中动态绑定技术涉及到jvm，我不懂哈，有时间再去研究，这里就不说了。 向上转型和向下转型向上转型123456789101112131415161718192021222324252627282930313233343536373839404142public class Animal &#123; public void eat()&#123; System.out.println("animal eatting..."); &#125;&#125;public class Cat extends Animal&#123; public void eat()&#123; System.out.println("我吃鱼"); &#125;&#125;public class Dog extends Animal&#123; public void eat()&#123; System.out.println("我吃骨头"); &#125; public void run()&#123; System.out.println("我会跑"); &#125;&#125;public class Main &#123; public static void main(String[] args) &#123; Animal animal = new Cat(); //向上转型 animal.eat(); animal = new Dog(); animal.eat(); &#125;&#125;//结果://我吃鱼//我吃骨头]]></content>
+      <categories>
+        <category>java学习</category>
+      </categories>
+      <tags>
+        <tag>javase</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[谈谈java中对象类型引用是引用还是指针]]></title>
